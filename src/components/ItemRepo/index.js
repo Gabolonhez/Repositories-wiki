@@ -1,12 +1,13 @@
 import React from 'react';
 import { ItemContainer } from './styles';
 
-function ItemRepo() { // Correção: Nomes de componentes começam com maiúscula
+
+function ItemRepo({repo}) { // Correção: Nomes de componentes começam com maiúscula
   return (
     <ItemContainer>
-      <h3>Gabriel</h3>
-      <p></p>
-      <a href="#">Ver repositório</a>
+      <h3>{repo.name}</h3>
+      <p>{repo.full_name}</p>
+      <a href={repo.html_url} target="_blank">Ver repositório</a>
       <a href="#" className="remove">Remover</a>
       <hr />
     </ItemContainer>
