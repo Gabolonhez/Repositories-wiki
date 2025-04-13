@@ -2,16 +2,21 @@ import React from 'react';
 import { ItemContainer } from './styles';
 
 
-function ItemRepo({repo}) { // Correção: Nomes de componentes começam com maiúscula
+function ItemRepo({repo, handleRemoveRepo}) {
+  
+    const handleRemove = () => {
+      handleRemoveRepo(repo.id)
+    }
+
   return (
-    <ItemContainer>
+    <ItemContainer onClick={handleRemove}>
       <h3>{repo.name}</h3>
       <p>{repo.full_name}</p>
-      <a href={repo.html_url} target="_blank">Ver repositório</a>
-      <a href="#" className="remove">Remover</a>
+      <a href={repo.html_url} target="_blank" rel="noreferrer">Ver repositório</a>
+      <a href="#" className="remove" rel='noreferrer'>Remover</a>
       <hr />
     </ItemContainer>
   );
 }
 
-export default ItemRepo; // Correção: Exportação consistente
+export default ItemRepo;
