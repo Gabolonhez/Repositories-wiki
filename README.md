@@ -1,3 +1,19 @@
+# Git Find
+![image](https://github.com/user-attachments/assets/8800d2d9-ece8-44ce-955c-170c8b0db276)
+
+
+## 📑 Descrição
+Procura repositórios no github utilizando o [nome do usuário]/[nome repositório].
+
+## 🎯 Funcionalidades
+- [x] : Permite pesquisar por repositórios do Github, retornando nome, link de acesso e link para remover.
+
+## 💻 Tecnologias
+- `React`
+- `HTML`
+- `CSS`
+- `Javascript`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
