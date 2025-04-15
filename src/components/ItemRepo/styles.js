@@ -16,8 +16,17 @@ export const ItemContainer = styled.div `
         color: #FAFAFA60;
     }
 
+    a {
+        color:rgb(37, 185, 81);
+    }
+
     a.remove {
         color: #FF0000;
+        
+    }
+
+    a:hover {
+        color: #000;
     }
 
     hr {

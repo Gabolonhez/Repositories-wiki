@@ -11,9 +11,9 @@ export const ButtonContainer = styled.div `
     border-radius: 20px;
 
     height: 62px;
-    width: 80%;
+    width: 15%;
 
-    margin: 20px;
+    margin-top: 40px;
 
     &:hover {
     

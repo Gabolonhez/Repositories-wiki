@@ -25,24 +25,23 @@ function App() {
       setCurrentRepo('e')
       return
     } else {
-      alert("Repositório não encontrado")
+      alert("Repositório não encontrado");
     }
   }
-
-  const handleRemoveRepo = (id) => {
-    // TO DO
-
-    
   }
+  const handleRemoveRepo = (id) => {
 
+    const newRepos = repos.filter(repo => repo.id !== id)
+    setRepos(newRepos);
+    
   }
 
   return (
     <Container>
-      <img src={gitLogo} width={72} height={72} alt="Github logo" />
+      <img src={gitLogo} width={100} height={100} alt="Github logo" />
       <Input value={currentRepo} onChange={(e) => setCurrentRepo(e.target.value)}/>
       <Button onClick={handleSearchRepo}></Button>
-      {repos.map(repo => <ItemRepo handleRemoveRepo={handleSearchRepo} repo={repo}></ItemRepo> )}
+      {repos.map(repo => <ItemRepo handleRemoveRepo={handleRemoveRepo} repo={repo}></ItemRepo> )}
     </Container>
   );
 }
